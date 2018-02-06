@@ -1,0 +1,36 @@
+.main_window{
+
+	height: 100%;
+	width: 100%;
+	background-color: #e0e0e0;
+	margin: auto;
+}
+
+.sec1{
+	
+	height: 99%;
+	width: 49%;
+	margin: auto;
+	position: relative;
+	background-color: #fefefe;
+	float: left;
+}
+
+.sec2{
+	
+	height: 99%;
+	width: 49%;
+	margin: auto;
+	position: relative;
+	background-color: #fefefe;
+	float: right;
+}
+
+.graph{
+	
+	height: 99%;
+	width: 99%;
+	margin: auto;
+	position: relative;
+	background-color: #e0e0e0;
+}
