@@ -18,9 +18,11 @@
 
             	<a name="image"></a>
                             <section class="image">
-							<img width="24%" height="90%" img align="right" src="https://www.theglobeandmail.com/resizer/-4ECuLzX_PpkKoMgf7xUP344rFw=/1200x0/filters:quality(80)/arc-anglerfish-tgam-prod-tgam.s3.amazonaws.com/public/PMQSOZENMBGF3D5IEFNKMIR7YY"></img>
+							<a href="getdata.php"> <img width="24%" height="90%" img align="right"  src="https://www.theglobeandmail.com/resizer/-4ECuLzX_PpkKoMgf7xUP344rFw=/1200x0/filters:quality(80)/arc-anglerfish-tgam-prod-tgam.s3.amazonaws.com/public/PMQSOZENMBGF3D5IEFNKMIR7YY"></a>
             
-							<iframe id="dataVisualFrm" width="75%" height="90%" src="http://130.61.25.101:9704/va/project.jsp?pageid=visualAnalyzer&reportmode=presentation&reportpath=%2Fshared%2FBloodhound%2FPublic%2FDEMO%20%5C*Bloodhound%20Sensors%20Mobile%20copy%5C*"></iframe>
+							<iframe width="75%" height="90%" src="http://data.bloodhoundssc.com/va/project.jsp?pageid=visualAnalyzer&reportmode=presentation&reportpath=%2Fshared%2FBloodhound%2FPublic%2FBloodhound%20Ben&anonymous=true"></iframe>
+            
+        
 
 
 
@@ -32,5 +34,7 @@
 			</div>
 			<?php include("footer.php"); ?>
 		</div>
+<script>
+</script>
 	</body>
 </html>
