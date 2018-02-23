@@ -1,36 +1,32 @@
-.main_window{
-
-	height: 100%;
+#overlay {
+	
+	position: fixed;
+	display: none;
 	width: 100%;
-	background-color: #e0e0e0;
-	margin: auto;
+	height: 99%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
 }
 
-.sec1{
+.close_button{
 	
-	height: 99%;
-	width: 49%;
-	margin: auto;
-	position: relative;
-	background-color: #fefefe;
-	float: left;
+	top: 0;
+	right: 0;
+	position: absolute;
 }
 
-.sec2{
+.close_button img{
 	
-	height: 99%;
-	width: 49%;
-	margin: auto;
-	position: relative;
-	background-color: #fefefe;
-	float: right;
+	max-height: 100%;
+	max-width: 100%;
 }
 
-.graph{
+.close_button:hover{
 	
-	height: 99%;
-	width: 99%;
-	margin: auto;
-	position: relative;
-	background-color: #e0e0e0;
+	content: url('../Images/close_button_hover.png');
+	cursor: pointer;
 }

@@ -4,16 +4,16 @@
 		<!-- self -->
 		<?php include("header.php"); ?>
 	</head>
-			<div id="content">
-			<?php include("nav.php"); ?>
-			<div id="return">
-				<a href="./">
-					<img src="images/return-icon.png"></img>Return to landing page...
-				</a>
-			</div>
 	<body>
 		<div id="content">
-			<?php include("nav.php"); ?>
+						<div class="nav">
+				<?php include("nav.php"); ?>
+				<div id="return">
+					<a href="./">
+						<img src="images/return-icon.png"></img>Return to landing page...
+					</a>
+				</div>
+			</div>
 			<br>
 
             	<a name="image"></a>
