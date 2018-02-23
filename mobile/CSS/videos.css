@@ -1,0 +1,90 @@
+/* Main feed start */
+
+.main_feed{
+
+	height: 45%;
+	width: 100%;
+	background-color: blue;
+}
+
+.main_feed img{
+	
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.main_feed iframe{
+	
+	width: 100%;
+	height: 100%;
+}
+
+.graph_container{
+
+	height: 30%;
+	width: 100%;
+}
+
+/* Alternate feed start */
+.alt_feed{
+
+	height: 40%;
+	width: 100%;
+	background-color: yellow;
+}
+
+.section{
+	
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+.feed{
+
+	width: 100%;
+	height: 80%;
+}
+
+.feed img{
+	
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.feed iframe{
+	
+	width: 100%;
+	height: 100%;
+}
+
+.switch{
+	
+	width: 100%;
+	height: 20%;
+}
+
+.switch img{
+	
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.switch img:hover{
+	
+	cursor: pointer;
+}
+
+.switch_icon{
+	
+	width: 50%;
+	height: 50%;
+	float: left;
+	bottom: 0;
+}
+.switch_icon img{
+	
+	max-height: 100%;
+	max-width: 100%;
+}

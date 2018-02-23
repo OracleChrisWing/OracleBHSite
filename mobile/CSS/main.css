@@ -1,0 +1,69 @@
+.content{
+
+	width: 100%;
+	height: 100%;
+	background-color: #e0e0e0;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.main{
+	
+	width: 100%;
+	height: 80%;
+	margin: auto;
+	flex: 1;
+	overflow: auto;
+}
+
+.main table{
+	
+	width: 100%;
+	height: 100%;
+}
+
+.main table tr{
+	
+	width: 100%;
+	height: 33%;
+	margin: auto;
+}
+
+.main table tr td{
+	
+	width: 100%;
+	height: 33%;
+	margin: auto;
+}
+
+.main table tr td table{
+	
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+
+.main table tr td table tr{
+	
+	width: 100%;
+	height: 33%;
+	margin: auto;
+}
+
+.main table tr td table tr td{
+	
+	width: 50%;
+	height: 100%;
+	margin: auto;
+}
+
+.main table tr td img{
+
+	max-width: 100%;
+	max-height: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
