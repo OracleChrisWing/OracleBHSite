@@ -1,9 +1,15 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="CSS/videos.css"/>
+		<link rel="stylesheet" href="CSS/popup.css"/>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="JS/jquery-1.7.2.min.js"></script>
 		<script src="JS/video_logic.js"></script>
+		
+		<script src="JS/simple-slider.js"></script>
+
+		<link href="CSS/simple-slider.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/simple-slider-volume.css" rel="stylesheet" type="text/css" /> 
 	</head>
 	<body>
 		<div class="container">
@@ -105,6 +111,7 @@
 			<div class="horiz_seperator">
 				<!-- Seperates the main content divs on page -->
 			</div>
+			<br>
 			<div class="sub_section">
 				<div class="logo_section">
 					<div class="logos">
@@ -123,8 +130,43 @@
 						<div class="pause-play">
 							<img src="images/play-button.png"><img>
 						</div>
+						&nbsp;
 						<div class="restart">
 							<img src="images/restart.png"><img>
+						</div>
+						&nbsp;
+						<div class="volume">
+							<div class="popup" onclick="togglePopup(1)">
+								<img src="images/volume.png"><img>
+								<span class="popuptext" id="myPopup_1">
+									<span>
+										<input type="text" data-slider="true" data-slider-theme="volume" value="50" data-slider-range="0, 100">
+										<input type="hidden" class="output">
+									</span>
+								</span>
+								<script>
+									$("[data-slider]")
+									.each(function () {
+										var input = $(this);
+										$("<span>")
+										.addClass("output")
+										.insertAfter($(this));
+									})
+									.bind("slider:ready slider:changed", function (event, data) {
+										$(this)
+										.nextAll(".output:first")
+										.html(data.value.toFixed(0));
+									});
+								</script>
+							</div>
+							<script>															
+								// When the user clicks on the volume icon, it opens the widget.
+								function togglePopup(id) {
+
+									var popup = document.getElementById("myPopup_" + id);
+									popup.classList.toggle("show");
+								}								
+							</script>	
 						</div>
 						<br>
 						<div class="toggle-facts">

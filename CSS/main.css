@@ -66,6 +66,36 @@
 	border-radius: 5%;
 }
 
+/* Firefox support. */
+@-moz-document url-prefix() {
+	
+	.main table tr td table tr td img{
+		
+		max-height: 100%;
+	}
+}
+
+/* MS-Edge support. */
+@supports (-ms-ime-align: auto) {
+	
+	.main table tr td table tr td img{
+		
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+/* Internet explorer. (IE9+) */
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+    /* //  CSS */
+	
+	.main table tr td table tr td img{
+		
+		max-height: 50%;
+		/* max-width: 80%; */
+	}
+}
+
 /* FACTS PAGE */
 #main #facts{
 	

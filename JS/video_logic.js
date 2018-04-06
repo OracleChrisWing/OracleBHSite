@@ -27,6 +27,7 @@ $(document).ready(function(){
 	var increment = (100 / feedDuration) / 20;	
 	var widthCounter = 0;
 	
+	// Progress bar marker.
 	var bar = $(".bar");
 	var bar_marker = $(".bar-marker");
 	
@@ -127,7 +128,7 @@ $(document).ready(function(){
 	// Previous volume value.
 	var previousValue = 0;
 	
-	/* // Handles volume change.
+	// Handles volume change.
 	window.setInterval(function(){
 
 		if($(".output").html() != previousValue){
@@ -136,14 +137,12 @@ $(document).ready(function(){
 			previousValue = parseInt($(".output").html()) / 100;
 			
 			v1.volume = previousValue;
-			// v2.volume = v1.volume;
-			// v3.volume = v1.volume;
 			
 			// Now need to handle when feeds change...
 		}
 	
 	}, 500);
-	*/
+	
 										
 	var v1Current = null;
 	var v2Current = null;
@@ -465,8 +464,7 @@ $(document).ready(function(){
 			series: [graphSpeedData] // Speed data loaded in from the current CSV file.
 		}, {
 		  low: 0
-		});
-			
+		});	
 	}
 	
 	var chart = new Chartist.Line('.ct-chart', {
@@ -490,7 +488,6 @@ $(document).ready(function(){
 	// On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
 	chart.on('draw', function(data) {
 
-		
 		if(data.type === 'line'){
 			// If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
 			data.element.animate({

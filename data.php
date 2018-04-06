@@ -1,72 +1,23 @@
 <html>
 	<head>
-        <style>
-        #overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255,255,255, 0.5);
-    z-index: 2;
-    cursor: pointer;
-}
-#title1{
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    font-size: 50px;
-    color: orange;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}    
-#text{
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    font-size: 40px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}    
-#text1{
-    position: absolute;
-    top: 25%;
-    left: 75%;
-    font-size: 40px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}    
-#text2{
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    font-size: 40px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}    
-#text3{
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    font-size: 40px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}    
-        
-        </style>
 		<!-- self -->
 		<?php include("header.php"); ?>
+		<link rel="stylesheet" href="CSS/data.css"/>
+		<script>
+			function download_raw(){
+				
+				alert("Bloodhound raw data will now download");
+			}
+			
+			function download_agg(){
+				
+				alert("Bloodhound aggregate data will now download");
+			}						
+		</script>
 	</head>
 	<body>
 		<div id="content">
-						<div class="nav">
+			<div class="nav">
 				<?php include("nav.php"); ?>
 				<div id="return">
 					<a href="./">
@@ -74,40 +25,57 @@
 					</a>
 				</div>
 			</div>
-			<br>
-        
-        <div id="overlay" onclick="off()">
-            <div id="title1">Download data from the car<a href="#"></div>
-  <div id="text">Raw data<a href="#"></div>
-  <div id="text1">Summarised data<a href="#"></div>
-            <div id="text2">Sensor description<a href="#"></div>
-            <div id="text3">Data guide<a href="#"></div>
-</div>
-
-            	<a name="image"></a>
-                            <section class="image">
-                                <div id="overlay" onclick="off()"></div>
-                                <div style="padding:20px">
-				<img onclick="on()" width="24%" height="82.5%" img align="right"  src="https://www.theglobeandmail.com/resizer/-4ECuLzX_PpkKoMgf7xUP344rFw=/1200x0/filters:quality(80)/arc-anglerfish-tgam-prod-tgam.s3.amazonaws.com/public/PMQSOZENMBGF3D5IEFNKMIR7YY"></a> 
-                                
-            
-							<iframe width="75%" height="82%" src="http://130.61.25.101:9704/va/ui/project.jsp?pageid=visualAnalyzer&reportmode=presentation&reportpath=%2Fshared%2FBloodhound%2FPublic%2FBloodhound%20Dashboard"></iframe>
-
-						</div>
-					</div>
-				</div>
+			<div class="graphFrame">
+				<iframe width="100%" height="100%" src="http://130.61.25.101:9704/va/ui/project.jsp?pageid=visualAnalyzer&reportmode=presentation&reportpath=%2Fshared%2FBloodhound%2FPublic%2FBloodhound%20Dashboard%20-%20Web&amp;anonymous=true"></iframe>
 			</div>
-<br>
-			<?php include("footer.php"); ?>
+			<div class="dataFrame">
+				<table class="table-container">
+					<tr>
+						<td class="top">
+							<table class="description">
+								<tr>
+									<td>
+										Welcome to the Data Visualisation page! To the left there are a series of visuals 
+										using data from the Newquay test runs completed in October 2017. You can select runs
+										on the top left hand table and the data will update in each visual. Double click a 
+										visual to expand its graph to interact with it and find out more.
+										<br><br>
+										<div class="quote">"Failure is the key to success; each mistake teaches us 
+										something."</div> - Morihel Ueshiba, Athlete
+										<br></br>
+										You man notice that in some of the visulisations there are gaps. 
+										This is due to the sensors not firing the data packets.
+										<br><br>
+										<div class="download_title">Download the Data</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="bottom">
+							<table class="download">
+								<tr>
+									<td>
+										<img id="download_img" src="images/download.png" onmouseover="this.src='images/download_hover.png';" onmouseout="this.src='images/download.png';" onclick="download_raw()"></img>Raw Data
+									</td>
+									<td>
+										<img id="download_img" src="images/download.png" onmouseover="this.src='images/download_hover.png';" onmouseout="this.src='images/download.png';" onclick="download_agg()"></img> Summarised Data
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img id="desc_img" src="images/description.png" onmouseover="this.src='images/description_hover.png';" onmouseout="this.src='images/description.png';" onclick="download_raw()"></img> Sensor Description
+									</td>
+									<td>
+										<img id="desc_img" src="images/description.png" onmouseover="this.src='images/description_hover.png';" onmouseout="this.src='images/description.png';"onclick="download_agg()"></img>Data Guide
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
-<script>
-function on() {
-    document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-    document.getElementById("overlay").style.display = "none";
-}
-</script>
 	</body>
 </html>
